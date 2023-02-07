@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class PlayData
 {
-	[Export] public float MyPaddle;
+	[Export] public float MyPaddlePosition;
 	[Export] public float MyPaddleVelocity;
+	[Export] public float PreviousPaddleVelocity;
 	[Export] public float OpponentPaddle;
 	[Export] public float OpponentVelocity;
 	[Export] public float BallPositionX;
@@ -36,10 +37,11 @@ public class PlayData
 	}
 	*/
 
-	public PlayData(Paddle p1, Paddle p2)
+	public PlayData(Paddle p1, Paddle p2, float previousPaddleVelocity)
 	{
-		MyPaddle = p1.TForm.localPosition.x;
+		MyPaddlePosition = p1.TForm.localPosition.x;
 		MyPaddleVelocity = p1._rb.velocity.x;
+		PreviousPaddleVelocity = previousPaddleVelocity; 
 		OpponentPaddle = p2.TForm.localPosition.x;
 		OpponentVelocity = p2._rb.velocity.x;
 
@@ -47,6 +49,8 @@ public class PlayData
 		BallPositionX = ball ? ball.TForm.position.x : 0;
 		BallPositionY = ball ? ball.TForm.position.y : 0;
 		BallVelocityX = ball ? ball._rb.velocity.x : 0;
-		BallPositionY = ball ? ball._rb.velocity.y : 0;
+		BallVelocityY = ball ? ball._rb.velocity.y : 0;
+		
+		Debug.Log("Debug here for data");
 	}
 }

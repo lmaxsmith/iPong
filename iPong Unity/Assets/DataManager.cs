@@ -15,13 +15,21 @@ public class DataManager : ArgyleComponent
     public float _saveDelay = 1f;
     
     string _dataString = String.Empty;
-    private string _fileName = $"PongData: {DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day} " +
+    private string _fileName = $"PongData {DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day} " +
                                $"{DateTime.Now.Hour}-{DateTime.Now.Minute}-{DateTime.Now.Second}.tsv";
 
-    private string FullPath(string filename) => Path.Combine("Data", filename);
+    private string FullPath(string filename)
+    {
+	    var path = Path.Combine("Data");
+	    if (!Directory.Exists(path))
+		    Directory.CreateDirectory(path);
+	    return Path.Combine(path, filename);
+    }
     
     [SerializeField] private Paddle p1;
     [SerializeField] private Paddle p2;
+
+    private float previousPaddleVelocity = 0;
     
     // Start is called before the first frame update
     void Start()
@@ -31,6 +39,8 @@ public class DataManager : ArgyleComponent
 	    
 	    captureLoop.LoopDuration = _captureDelay;
 	    SaveLoop.LoopDuration = _saveDelay;
+
+	    _dataString = new PlayData(p1, p2, previousPaddleVelocity).ToTsvHeader();
     }
 
     private void OnEnable()
@@ -51,18 +61,16 @@ public class DataManager : ArgyleComponent
 
     private void Capture()
     {
-	    _dataString += (new PlayData(p1, p2)).ToTsvLine();
+	    _dataString += (new PlayData(p1, p2, previousPaddleVelocity)).ToTsvLine();
+	    previousPaddleVelocity = p1._rb.velocity.x;
     }
 
-    private void Save()
+    private async void Save()
     {
-	    StoreAsync(_dataString, _fileName);
+	    await StoreAsync(_dataString, _fileName);
     }
     public async Task StoreAsync(string thing, string fileName)
     {
-	    //make sure the location exists
-	    Directory.CreateDirectory(FullPath(""));
-
 	    using (FileStream stream = new FileStream(FullPath(fileName), FileMode.Create, FileAccess.Write, FileShare.None))
 	    {
 		    using (StreamWriter writer = new StreamWriter(stream))
