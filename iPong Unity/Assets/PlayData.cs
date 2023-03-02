@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Argyle.UnclesToolkit.Support;
+using Unity.Barracuda;
 using UnityEngine;
 
 public class PlayData
@@ -50,7 +51,16 @@ public class PlayData
 		BallPositionY = ball ? ball.TForm.position.y : 0;
 		BallVelocityX = ball ? ball._rb.velocity.x : 0;
 		BallVelocityY = ball ? ball._rb.velocity.y : 0;
-		
-		Debug.Log("Debug here for data");
 	}
+
+	public Tensor ToTensor()
+	{
+		return new Tensor(1, 8, new []
+		{
+			MyPaddlePosition, PreviousPaddleVelocity, 
+			OpponentPaddle, OpponentVelocity,
+			BallPositionX, BallPositionY, BallVelocityX, BallVelocityY
+		});
+	}
+	
 }

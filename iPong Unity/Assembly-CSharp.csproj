@@ -50,13 +50,13 @@
      <Compile Include="Assets/Wall.cs" />
      <Compile Include="Assets/Goal.cs" />
      <Compile Include="Assets/ChatGptReferences/ProcessExample.cs" />
+     <Compile Include="Assets/PyTorchControl.cs" />
      <Compile Include="Assets/ScoreKeeper.cs" />
      <Compile Include="Assets/DataManager.cs" />
      <Compile Include="Assets/Ball.cs" />
      <Compile Include="Assets/PlayerInput.cs" />
      <Compile Include="Assets/Paddle.cs" />
      <Compile Include="Assets/PlayData.cs" />
-     <Compile Include="Assets/SkLearnControl.cs" />
      <Compile Include="Assets/AIControl.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
@@ -357,6 +357,9 @@
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>/Users/logan/Repositories/iPong/iPong Unity/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
+     <Reference Include="Google.Protobuf">
+     <HintPath>/Users/logan/Repositories/iPong/iPong Unity/Library/PackageCache/com.unity.barracuda@80909e3320/Barracuda/Runtime/Plugins/ProtoBuffer/Google.Protobuf.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Burst.Unsafe">
      <HintPath>/Users/logan/Repositories/iPong/iPong Unity/Library/PackageCache/com.unity.burst@1.7.4/Unity.Burst.Unsafe.dll</HintPath>
      </Reference>
@@ -365,9 +368,6 @@
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Rocks">
      <HintPath>/Users/logan/Repositories/iPong/iPong Unity/Library/PackageCache/com.unity.burst@1.7.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
-     </Reference>
-     <Reference Include="Google.Protobuf">
-     <HintPath>/Users/logan/Repositories/iPong/iPong Unity/Library/PackageCache/com.unity.barracuda@80909e3320/Barracuda/Runtime/Plugins/ProtoBuffer/Google.Protobuf.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.iOS.Extensions.Xcode">
      <HintPath>/Applications/UnityEditors/2022.2.1f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -831,14 +831,14 @@
      <Reference Include="Unity.Barracuda.ONNX">
      <HintPath>/Users/logan/Repositories/iPong/iPong Unity/Library/ScriptAssemblies/Unity.Barracuda.ONNX.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Barracuda.MacBLAS">
+     <HintPath>/Users/logan/Repositories/iPong/iPong Unity/Library/ScriptAssemblies/Unity.Barracuda.MacBLAS.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Timeline.Editor">
      <HintPath>/Users/logan/Repositories/iPong/iPong Unity/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Shared.Editor">
      <HintPath>/Users/logan/Repositories/iPong/iPong Unity/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Barracuda.MacBLAS">
-     <HintPath>/Users/logan/Repositories/iPong/iPong Unity/Library/ScriptAssemblies/Unity.Barracuda.MacBLAS.dll</HintPath>
      </Reference>
      <Reference Include="UniTask.DOTween">
      <HintPath>/Users/logan/Repositories/iPong/iPong Unity/Library/ScriptAssemblies/UniTask.DOTween.dll</HintPath>
@@ -846,11 +846,11 @@
      <Reference Include="UniTask.Addressables">
      <HintPath>/Users/logan/Repositories/iPong/iPong Unity/Library/ScriptAssemblies/UniTask.Addressables.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>/Users/logan/Repositories/iPong/iPong Unity/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Barracuda.iOSBLAS">
      <HintPath>/Users/logan/Repositories/iPong/iPong Unity/Library/ScriptAssemblies/Unity.Barracuda.iOSBLAS.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualStudio.Editor">
+     <HintPath>/Users/logan/Repositories/iPong/iPong Unity/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
      <HintPath>/Users/logan/Repositories/iPong/iPong Unity/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>

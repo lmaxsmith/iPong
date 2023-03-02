@@ -18,6 +18,9 @@ public class DataManager : ArgyleComponent
     private string _fileName = $"PongData {DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day} " +
                                $"{DateTime.Now.Hour}-{DateTime.Now.Minute}-{DateTime.Now.Second}.tsv";
 
+    
+    
+    
     private string FullPath(string filename)
     {
 	    var path = Path.Combine("Data");
@@ -30,6 +33,7 @@ public class DataManager : ArgyleComponent
     [SerializeField] private Paddle p2;
 
     private float previousPaddleVelocity = 0;
+    public PlayData LastData { get; private set; }
     
     // Start is called before the first frame update
     void Start()
@@ -61,7 +65,8 @@ public class DataManager : ArgyleComponent
 
     private void Capture()
     {
-	    _dataString += (new PlayData(p1, p2, previousPaddleVelocity)).ToTsvLine();
+	    LastData = new PlayData(p1, p2, previousPaddleVelocity);
+	    _dataString += LastData.ToTsvLine();
 	    previousPaddleVelocity = p1._rb.velocity.x;
     }
 
