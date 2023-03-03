@@ -8,7 +8,7 @@ public class PlayData
 {
 	[Export] public float MyPaddlePosition;
 	[Export] public float MyPaddleVelocity;
-	[Export] public float PreviousPaddleVelocity;
+	[Export] public float MyPaddleTimeAsIs;
 	[Export] public float OpponentPaddle;
 	[Export] public float OpponentVelocity;
 	[Export] public float BallPositionX;
@@ -38,11 +38,11 @@ public class PlayData
 	}
 	*/
 
-	public PlayData(Paddle p1, Paddle p2, float previousPaddleVelocity)
+	public PlayData(Paddle p1, Paddle p2, float timeAsIs)
 	{
 		MyPaddlePosition = p1.TForm.localPosition.x;
 		MyPaddleVelocity = p1._rb.velocity.x;
-		PreviousPaddleVelocity = previousPaddleVelocity; 
+		MyPaddleTimeAsIs = timeAsIs; 
 		OpponentPaddle = p2.TForm.localPosition.x;
 		OpponentVelocity = p2._rb.velocity.x;
 
@@ -57,7 +57,7 @@ public class PlayData
 	{
 		return new Tensor(1, 8, new []
 		{
-			MyPaddlePosition, PreviousPaddleVelocity, 
+			MyPaddlePosition, MyPaddleTimeAsIs, 
 			OpponentPaddle, OpponentVelocity,
 			BallPositionX, BallPositionY, BallVelocityX, BallVelocityY
 		});

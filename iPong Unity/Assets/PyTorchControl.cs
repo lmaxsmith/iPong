@@ -42,13 +42,14 @@ namespace DefaultNamespace
 		{
 			using var input = _dataManager.LastData.ToTensor();
 			{
+				Debug.Log($"Model input: {input}");
 				var execution = engine.Execute(input);
 				var output = execution.PeekOutput();
 
-				int move = Mathf.RoundToInt(output[0]);
+				int move = Mathf.RoundToInt(Mathf.Clamp(output[0] * 4, -1, 1));
 				_paddle.SetPaddleMovement(move);
 			
-				Log($"Model output: {move}");
+				Log($"Model output: {output[0]}");
 			}
 			
 		}

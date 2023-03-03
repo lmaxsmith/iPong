@@ -33,6 +33,8 @@ public class DataManager : ArgyleComponent
     [SerializeField] private Paddle p2;
 
     private float previousPaddleVelocity = 0;
+    private float timeAsIs = 0;
+    private float timeLastCapture = 0;
     public PlayData LastData { get; private set; }
     
     // Start is called before the first frame update
@@ -44,7 +46,8 @@ public class DataManager : ArgyleComponent
 	    captureLoop.LoopDuration = _captureDelay;
 	    SaveLoop.LoopDuration = _saveDelay;
 
-	    _dataString = new PlayData(p1, p2, previousPaddleVelocity).ToTsvHeader();
+	    _dataString = new PlayData(p1, p2, 0).ToTsvHeader();
+	    timeLastCapture = Time.realtimeSinceStartup;
     }
 
     private void OnEnable()
@@ -65,7 +68,13 @@ public class DataManager : ArgyleComponent
 
     private void Capture()
     {
-	    LastData = new PlayData(p1, p2, previousPaddleVelocity);
+	    if (previousPaddleVelocity == p1._rb.velocity.x)
+		    timeAsIs += Time.realtimeSinceStartup - timeLastCapture;
+	    else
+		    timeAsIs = 0;
+	    timeLastCapture = Time.realtimeSinceStartup;
+	    
+	    LastData = new PlayData(p1, p2, timeAsIs);
 	    _dataString += LastData.ToTsvLine();
 	    previousPaddleVelocity = p1._rb.velocity.x;
     }

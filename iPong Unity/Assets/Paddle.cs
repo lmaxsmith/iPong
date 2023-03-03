@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Argyle.UnclesToolkit.Base;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class Paddle : ArgyleComponent
 {
@@ -37,6 +38,12 @@ public class Paddle : ArgyleComponent
     }
 
     #region ==== Monobehavior ====------------------
+
+    protected override void PostStart()
+    {
+	    base.PostStart();
+	    TForm.localPosition = new Vector3(Random.Range(-2, 2), TForm.localPosition.y, TForm.localPosition.z);
+    }
 
     private void Update()
     {
