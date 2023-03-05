@@ -7,7 +7,9 @@ using UnityEngine;
 public class PlayData
 {
 	[Export] public float MyPaddlePosition;
-	[Export] public float MyPaddleVelocity;
+	[Export] public float MyPaddleIsRight;
+	[Export] public float MyPaddleIsLeft;
+	[Export] public float MyPaddleIsStill;
 	[Export] public float MyPaddleTimeAsIs;
 	[Export] public float OpponentPaddle;
 	[Export] public float OpponentVelocity;
@@ -41,7 +43,9 @@ public class PlayData
 	public PlayData(Paddle p1, Paddle p2, float timeAsIs)
 	{
 		MyPaddlePosition = p1.TForm.localPosition.x;
-		MyPaddleVelocity = p1._rb.velocity.x;
+		MyPaddleIsRight = p1._rb.velocity.x > 0 ? 1 : 0;
+		MyPaddleIsLeft = p1._rb.velocity.x < 0 ? 1 : 0;
+		MyPaddleIsStill = p1._rb.velocity.x == 1 ? 1 : 0;
 		MyPaddleTimeAsIs = timeAsIs; 
 		OpponentPaddle = p2.TForm.localPosition.x;
 		OpponentVelocity = p2._rb.velocity.x;
