@@ -45,7 +45,7 @@ public class PlayData
 		MyPaddlePosition = p1.TForm.localPosition.x;
 		MyPaddleIsRight = p1._rb.velocity.x > 0 ? 1 : 0;
 		MyPaddleIsLeft = p1._rb.velocity.x < 0 ? 1 : 0;
-		MyPaddleIsStill = p1._rb.velocity.x == 1 ? 1 : 0;
+		MyPaddleIsStill = p1._rb.velocity.x == 0 ? 1 : 0;
 		MyPaddleTimeAsIs = timeAsIs; 
 		OpponentPaddle = p2.TForm.localPosition.x;
 		OpponentVelocity = p2._rb.velocity.x;

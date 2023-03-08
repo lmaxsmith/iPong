@@ -42,14 +42,23 @@ namespace DefaultNamespace
 		{
 			using var input = _dataManager.LastData.ToTensor();
 			{
-				Debug.Log($"Model input: {input}");
+				var inputArr = input.ToReadOnlyArray();
+				Debug.Log($"Model input: {inputArr}");
 				var execution = engine.Execute(input);
 				var output = execution.PeekOutput();
-
-				int move = Mathf.RoundToInt(Mathf.Clamp(output[0] * 4, -1, 1));
-				_paddle.SetPaddleMovement(move);
+				var arr = output.ToReadOnlyArray();
+				
+				int direction;
+				if (arr[0] > arr[1] && arr[0] > arr[2])
+					direction = 1;
+				else if (arr[1] > arr[0] && arr[1] > arr[2])
+					direction = -1;
+				else
+					direction = 0;
+				
+				_paddle.SetPaddleMovement(direction);
 			
-				Log($"Model output: {output[0]}");
+				Log($"Model output: {arr[0]} {arr[1]} {arr[2]}: direction: {direction}");
 			}
 			
 		}

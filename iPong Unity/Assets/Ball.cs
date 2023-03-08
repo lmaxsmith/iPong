@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Argyle.UnclesToolkit.Base;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Ball : ArgyleComponent
 {
@@ -33,19 +34,27 @@ public class Ball : ArgyleComponent
 	protected override void PostStart()
 	{
 		base.PostStart();
-		_rb.velocity = new Vector2(0, -_verticalSpeed);
+		float direction = Random.Range(0,1) > .5 ? 1 : -1;
+
+		if (!_rb)
+			_rb = GetComponent<Rigidbody2D>();
+		_rb.velocity = new Vector2(0, _verticalSpeed * direction);
 	}
 
 	private void Update()
 	{
 		if(_rb.velocity != Vector2.zero)
 			velocity = _rb.velocity;
+		if (_rb.velocity.y < 1)
+		{
+			float direction = Random.Range(0,1) > .5 ? 1 : -1;
+			_rb.velocity = new Vector2(0, _verticalSpeed * direction);
+		}
 		
 		foreach (var p in _paddles)
 		{
 			if(p.Col.bounds.Contains(Col.bounds.center))
 			{
-				Log($"Hit the paddle");
 				_rb.velocity = new Vector2(_rb.velocity.x * p.GetAngleMod(), -_rb.velocity.y);
 			}
 		}
@@ -54,7 +63,6 @@ public class Ball : ArgyleComponent
 		{
 			if (w.Col.bounds.Contains(Col.bounds.center))
 			{
-				Log("Hit a wall!");
 				_rb.velocity = new Vector2(-_rb.velocity.x, _rb.velocity.y);
 			}
 		}
@@ -62,7 +70,6 @@ public class Ball : ArgyleComponent
 
 	private void OnCollisionEnter2D(Collision2D col)
 	{
-		Log("Collided! 2D!");
 		if(col.collider.GetComponent<Wall>() )
 			_rb.velocity = new Vector2(-velocity.x, velocity.y);
 		else
