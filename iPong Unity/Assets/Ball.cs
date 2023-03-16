@@ -34,20 +34,28 @@ public class Ball : ArgyleComponent
 	protected override void PostStart()
 	{
 		base.PostStart();
-		float direction = Random.Range(0,1) > .5 ? 1 : -1;
+		float direction = Random.Range(0f,1f) > .5 ? 1 : -1;
 
 		if (!_rb)
 			_rb = GetComponent<Rigidbody2D>();
 		_rb.velocity = new Vector2(0, _verticalSpeed * direction);
 	}
 
+	private float timeNotMovingY = 0;
 	private void Update()
 	{
 		if(_rb.velocity != Vector2.zero)
 			velocity = _rb.velocity;
-		if (_rb.velocity.y < 1)
+
+
+		if (Mathf.Abs(_rb.velocity.y) < 1)
+			timeNotMovingY += Time.deltaTime;
+		else
+			timeNotMovingY = 0;
+		
+		if (timeNotMovingY > .5f)
 		{
-			float direction = Random.Range(0,1) > .5 ? 1 : -1;
+			float direction = Random.Range(0f,1f) > .5 ? 1 : -1;
 			_rb.velocity = new Vector2(0, _verticalSpeed * direction);
 		}
 		
