@@ -49,6 +49,8 @@ namespace DefaultNamespace
 				var arr = output.ToReadOnlyArray();
 				
 				int direction;
+				
+				
 				if (arr[0] > arr[1] && arr[0] > arr[2])
 					direction = 1;
 				else if (arr[1] > arr[0] && arr[1] > arr[2])
@@ -56,9 +58,11 @@ namespace DefaultNamespace
 				else
 					direction = 0;
 				
-				_paddle.SetPaddleMovement(direction);
+				
+				
+				_paddle.SetPaddleMovement(direction = 0);
 			
-				Log($"Model output: {arr[0]} {arr[1]} {arr[2]}: direction: {direction}");
+				Log($"Model output: {arr[0]}, {arr[1]}, {arr[2]}: direction: {direction}");
 			}
 			
 		}
