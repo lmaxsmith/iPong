@@ -62,6 +62,14 @@ public class DataManager : ArgyleComponent
 	    SaveLoop.StopLoop();
     }
 
+    private void Update()
+    {
+	    LastData = new PlayData(p1, p2, timeAsIs);
+	    lastDataReport = LastData.ToTensor().ToReadOnlyArray();
+    }
+
+    public float[] lastDataReport;
+
     private Looper captureLoop = new Looper("Capture Loop", .1f);
     private Looper SaveLoop = new Looper("Save Loop", 1);
 

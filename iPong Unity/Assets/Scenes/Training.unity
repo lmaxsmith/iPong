@@ -390,10 +390,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe024f4b11a94282bfb8d1a598fbfdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _captureDelay: 0.02
+  _captureDelay: 0.01
   _saveDelay: 1
   p1: {fileID: 463064441}
   p2: {fileID: 1096363478}
+  lastDataReport: []
 --- !u!4 &571074631
 Transform:
   m_ObjectHideFlags: 0
@@ -745,7 +746,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054778310}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 239791fc33c940b6b221261c5def5b1d, type: 3}
   m_Name: 
@@ -754,7 +755,7 @@ MonoBehaviour:
   threshold: 0.1
   _loopDuration: 0.1
   _dataManager: {fileID: 571074630}
-  nnModel: {fileID: 5022602860645237092, guid: 5bdcd8df9b9fe488eba24223c84bd7c7, type: 3}
+  nnModel: {fileID: 5022602860645237092, guid: a0f1d24dc1c94c9448623ac9fe064652, type: 3}
 --- !u!114 &1096363478 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7039913565970761715, guid: f90b346d45d2145d69eb5a9d720f35d3, type: 3}
@@ -1498,6 +1499,14 @@ PrefabInstance:
       value: -1.8
       objectReference: {fileID: 0}
     - target: {fileID: 1915580308850555520, guid: f90b346d45d2145d69eb5a9d720f35d3, type: 3}
+      propertyPath: leftKey
+      value: 276
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915580308850555520, guid: f90b346d45d2145d69eb5a9d720f35d3, type: 3}
+      propertyPath: rightKey
+      value: 275
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915580308850555520, guid: f90b346d45d2145d69eb5a9d720f35d3, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -1515,7 +1524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8093325852763529181, guid: f90b346d45d2145d69eb5a9d720f35d3, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8093325852763529181, guid: f90b346d45d2145d69eb5a9d720f35d3, type: 3}
       propertyPath: threshold
