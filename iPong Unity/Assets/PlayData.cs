@@ -6,10 +6,8 @@ using UnityEngine;
 
 public class PlayData
 {
+	//input data
 	[Export] public float MyPaddlePosition;
-	[Export] public float MyPaddleIsRight;
-	[Export] public float MyPaddleIsLeft;
-	[Export] public float MyPaddleIsStill;
 	[Export] public float MyPaddleTimeAsIs;
 	[Export] public float OpponentPaddle;
 	[Export] public float OpponentVelocity;
@@ -17,44 +15,44 @@ public class PlayData
 	[Export] public float BallPositionY;
 	[Export] public float BallVelocityX;
 	[Export] public float BallVelocityY;
-
-	/*
-	public PlayData(float myPaddle, float myPaddleVelocity, float opponentPaddle, float opponentVelocity, Vector2 ballPosition, Vector2 ballVelocity)
-	{
-		MyPaddle = myPaddle;
-		MyPaddleVelocity = myPaddleVelocity;
-		OpponentPaddle = opponentPaddle;
-		OpponentVelocity = opponentVelocity;
-		BallPosition = ballPosition;
-		BallVelocity = ballVelocity;
-	}
-
-	public PlayData(float myPaddle, float myPaddleVelocity, float opponentPaddle, float opponentVelocity)
-	{
-		MyPaddle = myPaddle;
-		MyPaddleVelocity = myPaddleVelocity;
-		OpponentPaddle = opponentPaddle;
-		OpponentVelocity = opponentVelocity;
-		BallPosition = Vector2.zero;
-		BallVelocity = Vector2.zero;
-	}
-	*/
+	
+	//output data probability
+	[Export] public float IsPaddleStart; //probability
+	[Export] public float IsPaddleStop; //probability
+	[Export] public float IsPaddleContinuing; //probability
+	//output data direction classificaiton
+	[Export] public float IsPaddleRight; //probability
+	[Export] public float IsPaddleLeft; //probability
+	[Export] public float IsPaddleStill; //probability
+	
+	//support trackers
+	private float myPaddleLastVelocity = 0;
 
 	public PlayData(Paddle p1, Paddle p2, float timeAsIs)
 	{
+		//paddle model input
 		MyPaddlePosition = p1.TForm.localPosition.x;
-		MyPaddleIsRight = p1._rb.velocity.x > 0 ? 1 : 0;
-		MyPaddleIsLeft = p1._rb.velocity.x < 0 ? 1 : 0;
-		MyPaddleIsStill = p1._rb.velocity.x == 0 ? 1 : 0;
+		// MyPaddleIsRight = p1._rb.velocity.x > 0 ? 1 : 0;
+		// MyPaddleIsLeft = p1._rb.velocity.x < 0 ? 1 : 0;
+		// MyPaddleIsStill = p1._rb.velocity.x == 0 ? 1 : 0;
 		MyPaddleTimeAsIs = timeAsIs; 
 		OpponentPaddle = p2.TForm.localPosition.x;
 		OpponentVelocity = p2._rb.velocity.x;
 
+		//ball model input
 		Ball ball = GameObject.FindObjectOfType<Ball>();
 		BallPositionX = ball ? ball.TForm.position.x : 0;
 		BallPositionY = ball ? ball.TForm.position.y : 0;
 		BallVelocityX = ball ? ball._rb.velocity.x : 0;
 		BallVelocityY = ball ? ball._rb.velocity.y : 0;
+		
+		//paddle model output
+		IsPaddleStart = timeAsIs == 0 && p1._rb.velocity.x != 0 ? 1 : 0;
+		IsPaddleStop = timeAsIs == 0 && p1._rb.velocity.x == 0 ? 1 : 0;
+		IsPaddleContinuing = timeAsIs > 0 ? 1 : 0;
+		IsPaddleRight = p1._rb.velocity.x > 0 ? 1 : 0;
+		IsPaddleLeft = p1._rb.velocity.x < 0 ? 1 : 0;
+		IsPaddleStill = p1._rb.velocity.x == 0 ? 1 : 0;
 	}
 
 	public Tensor ToTensor()

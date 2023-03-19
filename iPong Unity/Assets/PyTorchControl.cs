@@ -51,21 +51,36 @@ namespace DefaultNamespace
 				using var output = execution.PeekOutput();
 				{
 					outputArray = output.ToReadOnlyArray();
-					softmax = SoftMax(outputArray);
 				}
+				float[] startStopProability = { outputArray[0], outputArray[1], outputArray[2] };
+				float[] directionClassification = {outputArray[3], outputArray[4], outputArray[5]};
 				
-				int valueI = SelectByProbability(outputArray);
-				if (valueI == 0)
-					direction = 1;
-				else if (valueI == 1)
-					direction = -1;
-				else
+				
+				
+				int startStopStay = SelectByProbability(startStopProability);
+
+				if (startStopStay == 0)
+				{
+					var directionSoftmax = SoftMax(directionClassification);
+					if(directionSoftmax[0] > directionSoftmax[2])
+						direction = -1;
+					else
+						direction = 1;
+					
+					Log($"Starting movement: {direction}");
+					_paddle.SetPaddleMovement(direction);
+				}
+				else if (startStopStay == 1)
+				{
 					direction = 0;
-				
-				
-				_paddle.SetPaddleMovement(direction);
-			
-				Log($"Model output: {softmax[0]}, {softmax[1]}, {softmax[2]}: direction: {direction}");
+					_paddle.SetPaddleMovement(direction);
+					Log($"Stopping movement");
+				}
+				// else
+				// {
+				// 	Log($"Keeping movement");
+				// }
+				//Log($"Model output: {softmax[0]}, {softmax[1]}, {softmax[2]}: direction: {direction}");
 			}
 			
 		}
