@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -5,6 +6,8 @@ using Cysharp.Threading.Tasks;
 using EasyButtons;
 using Unity.Barracuda;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 
 namespace DefaultNamespace
 {
@@ -44,19 +47,21 @@ namespace DefaultNamespace
 				var execution = engine.Execute(input);
 				
 				float[] softmax;
+				float[] outputArray;
 				using var output = execution.PeekOutput();
 				{
-					var arr = output.ToReadOnlyArray();
-					softmax = SoftMax(arr);
+					outputArray = output.ToReadOnlyArray();
+					softmax = SoftMax(outputArray);
 				}
-				outputArray = softmax.ToList();
-
-				if (softmax[0] > softmax[1] && softmax[0] > softmax[2])
+				
+				int valueI = SelectByProbability(outputArray);
+				if (valueI == 0)
 					direction = 1;
-				else if (softmax[1] > softmax[0] && softmax[1] > softmax[2])
+				else if (valueI == 1)
 					direction = -1;
 				else
 					direction = 0;
+				
 				
 				_paddle.SetPaddleMovement(direction);
 			
@@ -64,7 +69,23 @@ namespace DefaultNamespace
 			}
 			
 		}
-		
+
+
+		private static int SelectByProbability(float[] inputs)
+		{
+			float[] softmax = SoftMax(inputs);
+
+			float runningTotal = 0;
+			float r = Random.Range(0f, 1f);
+			for (int i = 0; i < softmax.Length; i++)
+			{
+				runningTotal += softmax[i];
+				if (r < runningTotal)
+					return i;
+			}
+
+			throw new IndexOutOfRangeException($"Number not found in 1 probability.");
+		}
 		
 		static float[] SoftMax(float[] inputs)
 		{

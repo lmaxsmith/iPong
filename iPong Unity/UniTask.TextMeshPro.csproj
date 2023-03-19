@@ -12,11 +12,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1ecf224c-907b-aa23-7230-7f0584bcf9bc}</ProjectGuid>
+    <ProjectGuid>{3b462e23-de4e-f95e-324e-8c9419d81265}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>UniTask.TextMeshPro</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -25,8 +25,8 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>Temp\Bin\Debug\Assembly-CSharp\</OutputPath>
-    <DefineConstants>UNITY_2022_2_9;UNITY_2022_2;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;PLATFORM_INITIALIZES_MEMORY_MANAGER_EXPLICITLY;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <OutputPath>Temp\Bin\Debug\UniTask.TextMeshPro\</OutputPath>
+    <DefineConstants>UNITY_2022_2_9;UNITY_2022_2;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;PLATFORM_INITIALIZES_MEMORY_MANAGER_EXPLICITLY;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;UNITASK_TEXTMESHPRO_SUPPORT;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169,0649</NoWarn>
@@ -45,140 +45,11 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.2.9f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\SimpleOpponent.cs" />
-     <Compile Include="Assets\ChatGptReferences\AsyncProcessExample.cs" />
-     <Compile Include="Assets\Wall.cs" />
-     <Compile Include="Assets\Goal.cs" />
-     <Compile Include="Assets\ChatGptReferences\ProcessExample.cs" />
-     <Compile Include="Assets\PyTorchControl.cs" />
-     <Compile Include="Assets\ScoreKeeper.cs" />
-     <Compile Include="Assets\DataManager.cs" />
-     <Compile Include="Assets\Ball.cs" />
-     <Compile Include="Assets\PlayerInput.cs" />
-     <Compile Include="Assets\Paddle.cs" />
-     <Compile Include="Assets\PlayData.cs" />
-     <Compile Include="Assets\AIControl.cs" />
-     <Folder Include="Assets" />
-     <None Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0\package.json" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
-     <None Include="Library\PackageCache\com.unity.modules.jsonserialize@1.0.0\package.json" />
-     <None Include="Library\PackageCache\com.unity.modules.screencapture@1.0.0\package.json" />
-     <None Include="Library\PackageCache\com.unity.modules.cloth@1.0.0\package.json" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-     <Folder Include="Library\PackageCache\com.unity.barracuda@80909e3320\Barracuda\Runtime" />
-     <Folder Include="Library\PackageCache\com.unity.modules.imgui@1.0.0" />
-     <Folder Include="Assets\TextMesh Pro\Sprites" />
-     <None Include="Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0\package.json" />
-     <None Include="Library\PackageCache\com.unity.modules.ai@1.0.0\package.json" />
-     <Folder Include="Library\PackageCache\com.unity.modules.animation@1.0.0" />
-     <None Include="Library\PackageCache\com.unity.ugui@1.0.0\package.json" />
-     <Folder Include="Library\PackageCache\com.unity.modules.xr@1.0.0" />
-     <None Include="Library\PackageCache\com.unity.2d.tilemap@1.0.0\package.json" />
-     <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
-     <Folder Include="Library\PackageCache\com.madsbangh.easybuttons@39da70419a" />
-     <Folder Include="Library\PackageCache\com.unity.barracuda@80909e3320\Barracuda\Runtime\Plugins" />
-     <None Include="Library\PackageCache\com.cysharp.unitask@73d86259ce\package.json" />
-     <None Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0\package.json" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-     <None Include="Library\PackageCache\com.unity.modules.imgui@1.0.0\package.json" />
-     <None Include="Library\PackageCache\com.unity.modules.tilemap@1.0.0\package.json" />
-     <Folder Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0" />
-     <None Include="Library\PackageCache\com.madsbangh.easybuttons@39da70419a\package.json" />
-     <Folder Include="Assets\Scenes" />
-     <Folder Include="Library\PackageCache\com.unity.barracuda@80909e3320\Barracuda\Runtime\Plugins\ProtoBuffer" />
-     <None Include="Library\PackageCache\com.unity.barracuda@80909e3320\package.json" />
-     <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
-     <None Include="Library\PackageCache\com.unity.modules.terrainphysics@1.0.0\package.json" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-     <Folder Include="Assets\TextMesh Pro\Resources" />
-     <Folder Include="Library\PackageCache\com.unity.modules.screencapture@1.0.0" />
-     <Folder Include="Library\PackageCache\com.unity.modules.cloth@1.0.0" />
-     <None Include="Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0\package.json" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-     <Folder Include="Library\PackageCache\com.unity.feature.2d@1.0.0" />
-     <Folder Include="Library\PackageCache\com.unity.modules.imageconversion@1.0.0" />
-     <Folder Include="Library\PackageCache\com.unity.modules.terrainphysics@1.0.0" />
-     <None Include="Library\PackageCache\com.unity.modules.imageconversion@1.0.0\package.json" />
-     <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0" />
-     <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0" />
-     <Folder Include="Assets\TextMesh Pro" />
-     <None Include="Library\PackageCache\com.unity.modules.unityanalytics@1.0.0\package.json" />
-     <Folder Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0" />
-     <None Include="Library\PackageCache\com.unity.modules.video@1.0.0\package.json" />
-     <Folder Include="Library\PackageCache\com.unity.modules.unityanalytics@1.0.0" />
-     <Folder Include="Library\PackageCache\com.unity.modules.physics@1.0.0" />
-     <Folder Include="Library\PackageCache\com.unity.modules.vr@1.0.0" />
-     <Folder Include="Library\PackageCache\com.unity.modules.physics2d@1.0.0" />
-     <None Include="Library\PackageCache\com.unity.modules.particlesystem@1.0.0\package.json" />
-     <Folder Include="Library\PackageCache\com.unity.modules.wind@1.0.0" />
-     <Folder Include="Library\PackageCache\com.unity.barracuda@80909e3320\Barracuda" />
-     <Folder Include="Library\PackageCache\com.cysharp.unitask@73d86259ce" />
-     <None Include="Library\PackageCache\com.unity.modules.physics2d@1.0.0\package.json" />
-     <Folder Include="Library\PackageCache\com.unity.barracuda@80909e3320" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
-     <None Include="Library\PackageCache\com.unity.modules.vr@1.0.0\package.json" />
-     <Folder Include="Library\PackageCache\com.unity.modules.uielements@1.0.0" />
-     <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0" />
-     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
-     <Folder Include="Library\PackageCache\com.unity.modules.particlesystem@1.0.0" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
-     <None Include="Library\PackageCache\com.unity.modules.wind@1.0.0\package.json" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
-     <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests" />
-     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-     <None Include="Library\PackageCache\com.unity.modules.umbra@1.0.0\package.json" />
-     <Folder Include="Library\PackageCache\com.unity.2d.sprite@1.0.0" />
-     <Folder Include="Library\PackageCache\com.unity.modules.tilemap@1.0.0" />
-     <Folder Include="Library\PackageCache\com.unity.modules.ui@1.0.0" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-     <Folder Include="Library\PackageCache\com.unity.modules.androidjni@1.0.0" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-     <Folder Include="Assets\TextMesh Pro\Shaders" />
-     <None Include="Library\PackageCache\com.unity.modules.audio@1.0.0\package.json" />
-     <Folder Include="Library\PackageCache\com.unity.barracuda@80909e3320\Barracuda\Tests" />
-     <None Include="Library\PackageCache\com.unity.modules.physics@1.0.0\package.json" />
-     <Folder Include="Assets\TextMesh Pro\Resources\Style Sheets" />
-     <Folder Include="Assets\TextMesh Pro\Fonts" />
-     <None Include="Library\PackageCache\com.unity.modules.vehicles@1.0.0\package.json" />
-     <None Include="Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0\package.json" />
-     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-     <Folder Include="Library\PackageCache\com.unity.2d.tilemap@1.0.0\Tests" />
-     <None Include="Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0\package.json" />
-     <None Include="Library\PackageCache\com.unity.feature.2d@1.0.0\package.json" />
-     <Folder Include="Assets\ChatGptReferences" />
-     <Folder Include="Library\PackageCache\com.unity.modules.vehicles@1.0.0" />
-     <None Include="Library\PackageCache\com.unity.modules.xr@1.0.0\package.json" />
-     <Folder Include="Assets\Models" />
-     <Folder Include="Library\PackageCache\com.unity.modules.umbra@1.0.0" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-     <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0" />
-     <None Include="Library\PackageCache\com.unity.modules.director@1.0.0\package.json" />
-     <Folder Include="Library\PackageCache\com.unity.modules.jsonserialize@1.0.0" />
-     <Folder Include="Library\PackageCache\com.unity.modules.director@1.0.0" />
-     <Folder Include="Library\PackageCache\com.unity.modules.audio@1.0.0" />
-     <None Include="Library\PackageCache\com.unity.modules.terrain@1.0.0\package.json" />
-     <None Include="Library\PackageCache\com.unity.2d.sprite@1.0.0\package.json" />
-     <None Include="Library\PackageCache\com.unity.modules.androidjni@1.0.0\package.json" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
-     <Folder Include="Library\PackageCache\com.unity.modules.video@1.0.0" />
-     <Folder Include="Library\PackageCache\com.unity.modules.ai@1.0.0" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
-     <Folder Include="Library\PackageCache\com.unity.2d.tilemap@1.0.0" />
-     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-     <Folder Include="Library\PackageCache\com.unity.modules.terrain@1.0.0" />
-     <Folder Include="Library\PackageCache\com.unity.2d.sprite@1.0.0\Tests" />
-     <None Include="Library\PackageCache\com.unity.modules.animation@1.0.0\package.json" />
-     <Folder Include="Assets\TextMesh Pro\Documentation" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-     <None Include="Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0\package.json" />
-     <None Include="Library\PackageCache\com.unity.modules.uielements@1.0.0\package.json" />
-     <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0" />
-     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
-     <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0" />
-     <None Include="Library\PackageCache\com.unity.modules.ui@1.0.0\package.json" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+     <Compile Include="Library\PackageCache\com.cysharp.unitask@73d86259ce\Runtime\External\TextMeshPro\TextMeshProAsyncExtensions.cs" />
+     <Compile Include="Library\PackageCache\com.cysharp.unitask@73d86259ce\Runtime\External\TextMeshPro\TextMeshProAsyncExtensions.InputField.cs" />
+     <Folder Include="Library\PackageCache\com.cysharp.unitask@73d86259ce\Runtime\External\TextMeshPro" />
+     <None Include="Library\PackageCache\com.cysharp.unitask@73d86259ce\Runtime\External\TextMeshPro\TextMeshProAsyncExtensions.InputField.tt" />
+     <None Include="Library\PackageCache\com.cysharp.unitask@73d86259ce\Runtime\External\TextMeshPro\UniTask.TextMeshPro.asmdef" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.2.9f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -428,14 +299,50 @@
      <Reference Include="UnityEditor.UnityConnectModule">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.2.9f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
+     <Reference Include="UnityEditor.Graphs">
+     <HintPath>C:\Program Files\Unity\Hub\Editor\2022.2.9f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.Android.Extensions">
+     <HintPath>C:\Program Files\Unity\Hub\Editor\2022.2.9f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.iOS.Extensions">
+     <HintPath>C:\Program Files\Unity\Hub\Editor\2022.2.9f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+     <HintPath>C:\Program Files\Unity\Hub\Editor\2022.2.9f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UWP.Extensions">
+     <HintPath>C:\Program Files\Unity\Hub\Editor\2022.2.9f1\Editor\Data\PlaybackEngines\MetroSupport\UnityEditor.UWP.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.YamlDotNet">
+     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Collections.LowLevel.ILSupport">
      <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Plastic.Antlr3.Runtime">
+     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\PackageCache\com.unity.collab-proxy@2.0.0\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Plastic.Newtonsoft.Json">
+     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\PackageCache\com.unity.collab-proxy@2.0.0\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+     </Reference>
+     <Reference Include="log4netPlastic">
+     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\PackageCache\com.unity.collab-proxy@2.0.0\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.IonicZip">
+     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Google.Protobuf">
      <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\PackageCache\com.unity.barracuda@80909e3320\Barracuda\Runtime\Plugins\ProtoBuffer\Google.Protobuf.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.TextureAssets">
+     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+     </Reference>
+     <Reference Include="unityplastic">
+     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\PackageCache\com.unity.collab-proxy@2.0.0\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.iOS.Extensions.Xcode">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.2.9f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -818,173 +725,14 @@
      <Reference Include="System.Xml.Serialization">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.2.9f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.2D.IK.Runtime">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.AI.Navigation">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst.Editor">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Common.Path.Editor">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.2D.Common.Path.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.PixelPerfect.Editor">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Rider.Editor">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Mathematics.Editor">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Tilemap.Extras.Editor">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Collections">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.SpriteShape.Runtime">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.PixelPerfect">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.TextMeshPro">
      <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VSCode.Editor">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="PsdPlugin">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Timeline.Editor">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Shared.Editor">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Core">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Animation.Runtime">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Core.Editor">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Tilemap.Extras">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Flow.Editor">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.InternalAPIEngineBridge.001">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Common.Runtime">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Timeline">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.InternalAPIEditorBridge.001">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Psdimporter.Editor">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.AI.Navigation.Updater">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.State.Editor">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Mathematics">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Common.Editor">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.TextMeshPro.Editor">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.AI.Navigation.Editor">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.State">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.SpriteShape.Editor">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Animation.Editor">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.IK.Editor">
-     <HintPath>C:\Users\User\OneDrive\Documents\Repositories\iPong\iPong Unity\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
-     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="EasyButtons.csproj">
-      <Project>{25a0b5d2-0541-94ca-8aad-e536df1636d5}</Project>
-      <Name>EasyButtons</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
-      <Project>{6fcad4c0-12dd-8d75-2fa4-57d1a14631df}</Project>
-      <Name>Unity.2D.Sprite.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnclesToolkit.csproj">
-      <Project>{7885195d-c12a-8a7b-0967-5753dc2866b0}</Project>
-      <Name>UnclesToolkit</Name>
-    </ProjectReference>
-    <ProjectReference Include="EasyButtons.Editor.csproj">
-      <Project>{053dc585-e06a-d1ff-91c1-36501f0e9d9b}</Project>
-      <Name>EasyButtons.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UniTask.TextMeshPro.csproj">
-      <Project>{3b462e23-de4e-f95e-324e-8c9419d81265}</Project>
-      <Name>UniTask.TextMeshPro</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Barracuda.ONNX.csproj">
-      <Project>{1e9c92be-6d40-25f1-692c-1226114104e3}</Project>
-      <Name>Unity.Barracuda.ONNX</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Barracuda.MacBLAS.csproj">
-      <Project>{0f1a9a76-b15a-75fe-3c62-ee979e31df24}</Project>
-      <Name>Unity.Barracuda.MacBLAS</Name>
-    </ProjectReference>
-    <ProjectReference Include="UniTask.DOTween.csproj">
-      <Project>{40f66161-48ca-3379-9a2a-44950f59c636}</Project>
-      <Name>UniTask.DOTween</Name>
-    </ProjectReference>
-    <ProjectReference Include="UniTask.Addressables.csproj">
-      <Project>{c3121d31-985d-591e-db52-73f87eefba6d}</Project>
-      <Name>UniTask.Addressables</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Barracuda.iOSBLAS.csproj">
-      <Project>{c8c2addd-f02e-f93c-32b0-8e6430c632e3}</Project>
-      <Name>Unity.Barracuda.iOSBLAS</Name>
+    <ProjectReference Include="UniTask.csproj">
+      <Project>{4154dc6e-4e19-d2c9-ad39-1078ff395043}</Project>
+      <Name>UniTask</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{e03a9f8c-ddb0-1ccd-4879-88b2dd15ee6f}</Project>
@@ -993,30 +741,6 @@
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{4ce6e1a9-bfe5-d3d5-c137-0301c5da7731}</Project>
       <Name>UnityEngine.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Barracuda.csproj">
-      <Project>{63654b4e-c7d5-f480-e732-902a81c3d717}</Project>
-      <Name>Unity.Barracuda</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Barracuda.BurstBLAS.csproj">
-      <Project>{ec90b7f6-e8e0-db40-757e-deb0068c1856}</Project>
-      <Name>Unity.Barracuda.BurstBLAS</Name>
-    </ProjectReference>
-    <ProjectReference Include="UniTask.Linq.csproj">
-      <Project>{d18cde97-d17b-e0d8-66d7-9e7832df1c8b}</Project>
-      <Name>UniTask.Linq</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Barracuda.Editor.csproj">
-      <Project>{f6e4febe-8c59-40b3-fbc1-085575828b9c}</Project>
-      <Name>Unity.Barracuda.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UniTask.csproj">
-      <Project>{4154dc6e-4e19-d2c9-ad39-1078ff395043}</Project>
-      <Name>UniTask</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Tilemap.Editor.csproj">
-      <Project>{717c0860-a786-81e6-974c-b1efee09d4de}</Project>
-      <Name>Unity.2D.Tilemap.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

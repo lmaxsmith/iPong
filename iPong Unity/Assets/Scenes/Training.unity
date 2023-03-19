@@ -746,7 +746,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054778310}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 239791fc33c940b6b221261c5def5b1d, type: 3}
   m_Name: 
@@ -756,6 +756,9 @@ MonoBehaviour:
   _loopDuration: 0.1
   _dataManager: {fileID: 571074630}
   nnModel: {fileID: 5022602860645237092, guid: a0f1d24dc1c94c9448623ac9fe064652, type: 3}
+  inputArray: []
+  outputArray: []
+  direction: 0
 --- !u!114 &1096363478 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7039913565970761715, guid: f90b346d45d2145d69eb5a9d720f35d3, type: 3}
@@ -1524,7 +1527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8093325852763529181, guid: f90b346d45d2145d69eb5a9d720f35d3, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8093325852763529181, guid: f90b346d45d2145d69eb5a9d720f35d3, type: 3}
       propertyPath: threshold
