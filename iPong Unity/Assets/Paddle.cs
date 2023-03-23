@@ -54,7 +54,7 @@ public class Paddle : ArgyleComponent
     
     public void SetPaddleMovement(int direction)
     {
-	    _rb.velocity = new Vector2(direction * _speed, 0f);
+	    _rb.velocity = TForm.TransformDirection(new Vector2(direction * _speed, 0f));
     }
 
     public float GetAngleMod()

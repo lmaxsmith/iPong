@@ -48,6 +48,9 @@ public class DataManager : ArgyleComponent
 
 	    _dataString = new PlayData(p1, p2, 0).ToTsvHeader();
 	    timeLastCapture = Time.realtimeSinceStartup;
+	    
+	    Application.targetFrameRate = 100;
+	    QualitySettings.vSyncCount = 1;
     }
 
     private void OnEnable()

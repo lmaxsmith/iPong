@@ -35,8 +35,10 @@ namespace DefaultNamespace
 		}
 
 		public bool IsOutOfThreshold() => Mathf.Abs(Ball.TForm.position.x - _paddle.TForm.position.x) > threshold;
-		public bool isLeft() => Ball.TForm.position.x < _paddle.TForm.position.x - threshold;
-		public bool isRight() => Ball.TForm.position.x > _paddle.TForm.position.x + threshold;
+		public bool isLeft() => ballPositionRelative().x < _paddle.TForm.localPosition.x - threshold;
+		public bool isRight() => ballPositionRelative().x > _paddle.TForm.localPosition.x + threshold;
 		public bool IsApproaching() => TForm.TransformDirection(Ball._rb.velocity).y < 0;
+		
+		private Vector3 ballPositionRelative() => TForm.InverseTransformPoint(Ball.TForm.position);
 	}
 }

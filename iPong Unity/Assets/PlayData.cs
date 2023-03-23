@@ -31,26 +31,24 @@ public class PlayData
 	{
 		//paddle model input
 		MyPaddlePosition = p1.TForm.localPosition.x;
-		// MyPaddleIsRight = p1._rb.velocity.x > 0 ? 1 : 0;
-		// MyPaddleIsLeft = p1._rb.velocity.x < 0 ? 1 : 0;
-		// MyPaddleIsStill = p1._rb.velocity.x == 0 ? 1 : 0;
+
 		MyPaddleTimeAsIs = timeAsIs; 
 		OpponentPaddle = p2.TForm.localPosition.x;
-		OpponentVelocity = p2._rb.velocity.x;
+		OpponentVelocity = p1.TForm.InverseTransformDirection(p2._rb.velocity).x;
 
 		//ball model input
 		Ball ball = GameObject.FindObjectOfType<Ball>();
-		BallPositionX = ball ? ball.TForm.position.x : 0;
-		BallPositionY = ball ? ball.TForm.position.y : 0;
-		BallVelocityX = ball ? ball._rb.velocity.x : 0;
-		BallVelocityY = ball ? ball._rb.velocity.y : 0;
+		BallPositionX = ball ? p1.TForm.InverseTransformPoint(ball.TForm.position).x : 0;
+		BallPositionY = ball ? p1.TForm.InverseTransformPoint(ball.TForm.position).y : 0;
+		BallVelocityX = ball ? p1.TForm.InverseTransformDirection(ball._rb.velocity).x : 0;
+		BallVelocityY = ball ? p1.TForm.InverseTransformDirection(ball._rb.velocity).y : 0;
 		
 		//paddle model output
-		IsPaddleStart = timeAsIs == 0 && p1._rb.velocity.x != 0 ? 1 : 0;
-		IsPaddleStop = timeAsIs == 0 && p1._rb.velocity.x == 0 ? 1 : 0;
+		IsPaddleStart = timeAsIs == 0 && p1.TForm.InverseTransformDirection(p1._rb.velocity).x != 0 ? 1 : 0;
+		IsPaddleStop = timeAsIs == 0 && p1.TForm.InverseTransformDirection(p1._rb.velocity).x == 0 ? 1 : 0;
 		IsPaddleContinuing = timeAsIs > 0 ? 1 : 0;
-		IsPaddleLeft = p1._rb.velocity.x < 0 ? 1 : 0;
-		IsPaddleRight = p1._rb.velocity.x > 0 ? 1 : 0;
+		IsPaddleLeft = p1.TForm.InverseTransformDirection(p1._rb.velocity).x < 0 ? 1 : 0;
+		IsPaddleRight = p1.TForm.InverseTransformDirection(p1._rb.velocity).x > 0 ? 1 : 0;
 		
 	}
 

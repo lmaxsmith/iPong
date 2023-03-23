@@ -37,15 +37,17 @@ namespace DefaultNamespace
 		public List<float> outputArray = new List<float>();
 		public int direction = 0;
 
+		[Range(.5f, 2)]
+		public float _chillPill = 1;
 		protected override async UniTask Control()
 		{
 			using var input = _dataManager.LastData.ToTensor();
 			{
 				var inputArr = input.ToReadOnlyArray();
 				inputArray = inputArr.ToList();
-				Debug.Log(
-					$"Model input: {inputArray[0]}, {inputArray[1]}, {inputArray[2]}, " +
-					$"{inputArray[3]}, {inputArray[4]}");
+				// Debug.Log(
+				// 	$"Model input: {inputArray[0]}, {inputArray[1]}, {inputArray[2]}, " +
+				// 	$"{inputArray[3]}, {inputArray[4]}");
 				var execution = engine.Execute(input);
 				
 				float[] softmax;
@@ -54,7 +56,7 @@ namespace DefaultNamespace
 				{
 					outputArray = output.ToReadOnlyArray();
 				}
-				float[] startStopProability = { outputArray[0], outputArray[1], outputArray[2] };
+				float[] startStopProability = { outputArray[0], outputArray[1], outputArray[2] * _chillPill };
 				float[] directionClassification = {outputArray[3], outputArray[4]};
 				
 				
