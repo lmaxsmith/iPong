@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -5,6 +6,8 @@ using Cysharp.Threading.Tasks;
 using EasyButtons;
 using Unity.Barracuda;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 
 namespace DefaultNamespace
 {
@@ -40,31 +43,66 @@ namespace DefaultNamespace
 			{
 				var inputArr = input.ToReadOnlyArray();
 				inputArray = inputArr.ToList();
-				Debug.Log($"Model input: {inputArr}");
+				Debug.Log(
+					$"Model input: {inputArray[0]}, {inputArray[1]}, {inputArray[2]}, " +
+					$"{inputArray[3]}, {inputArray[4]}");
 				var execution = engine.Execute(input);
 				
 				float[] softmax;
+				float[] outputArray;
 				using var output = execution.PeekOutput();
 				{
-					var arr = output.ToReadOnlyArray();
-					softmax = SoftMax(arr);
+					outputArray = output.ToReadOnlyArray();
 				}
-				outputArray = softmax.ToList();
-
-				if (softmax[0] > softmax[1] && softmax[0] > softmax[2])
-					direction = 1;
-				else if (softmax[1] > softmax[0] && softmax[1] > softmax[2])
-					direction = -1;
-				else
-					direction = 0;
+				float[] startStopProability = { outputArray[0], outputArray[1], outputArray[2] };
+				float[] directionClassification = {outputArray[3], outputArray[4]};
 				
-				_paddle.SetPaddleMovement(direction);
-			
-				Log($"Model output: {softmax[0]}, {softmax[1]}, {softmax[2]}: direction: {direction}");
+				
+				
+				int startStopStay = SelectByProbability(startStopProability);
+
+				if (startStopStay == 0)
+				{
+					var directionSoftmax = SoftMax(directionClassification);
+					if(directionSoftmax[0] > directionSoftmax[1])
+						direction = -1;
+					else
+						direction = 1;
+					
+					Log($"Starting movement: {direction}");
+					_paddle.SetPaddleMovement(direction);
+				}
+				else if (startStopStay == 1)
+				{
+					direction = 0;
+					_paddle.SetPaddleMovement(direction);
+					Log($"Stopping movement");
+				}
+				// else
+				// {
+				// 	Log($"Keeping movement");
+				// }
+				//Log($"Model output: {softmax[0]}, {softmax[1]}, {softmax[2]}: direction: {direction}");
 			}
 			
 		}
-		
+
+
+		private static int SelectByProbability(float[] inputs)
+		{
+			float[] softmax = SoftMax(inputs);
+
+			float runningTotal = 0;
+			float r = Random.Range(0f, 1f);
+			for (int i = 0; i < softmax.Length; i++)
+			{
+				runningTotal += softmax[i];
+				if (r < runningTotal)
+					return i;
+			}
+
+			throw new IndexOutOfRangeException($"Number not found in 1 probability.");
+		}
 		
 		static float[] SoftMax(float[] inputs)
 		{
