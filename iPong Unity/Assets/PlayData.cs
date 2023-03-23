@@ -21,9 +21,8 @@ public class PlayData
 	[Export] public float IsPaddleStop; //probability
 	[Export] public float IsPaddleContinuing; //probability
 	//output data direction classificaiton
-	[Export] public float IsPaddleRight; //probability
 	[Export] public float IsPaddleLeft; //probability
-	[Export] public float IsPaddleStill; //probability
+	[Export] public float IsPaddleRight; //probability
 	
 	//support trackers
 	private float myPaddleLastVelocity = 0;
@@ -50,9 +49,9 @@ public class PlayData
 		IsPaddleStart = timeAsIs == 0 && p1._rb.velocity.x != 0 ? 1 : 0;
 		IsPaddleStop = timeAsIs == 0 && p1._rb.velocity.x == 0 ? 1 : 0;
 		IsPaddleContinuing = timeAsIs > 0 ? 1 : 0;
-		IsPaddleRight = p1._rb.velocity.x > 0 ? 1 : 0;
 		IsPaddleLeft = p1._rb.velocity.x < 0 ? 1 : 0;
-		IsPaddleStill = p1._rb.velocity.x == 0 ? 1 : 0;
+		IsPaddleRight = p1._rb.velocity.x > 0 ? 1 : 0;
+		
 	}
 
 	public Tensor ToTensor()

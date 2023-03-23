@@ -43,7 +43,9 @@ namespace DefaultNamespace
 			{
 				var inputArr = input.ToReadOnlyArray();
 				inputArray = inputArr.ToList();
-				Debug.Log($"Model input: {inputArr}");
+				Debug.Log(
+					$"Model input: {inputArray[0]}, {inputArray[1]}, {inputArray[2]}, " +
+					$"{inputArray[3]}, {inputArray[4]}");
 				var execution = engine.Execute(input);
 				
 				float[] softmax;
@@ -53,7 +55,7 @@ namespace DefaultNamespace
 					outputArray = output.ToReadOnlyArray();
 				}
 				float[] startStopProability = { outputArray[0], outputArray[1], outputArray[2] };
-				float[] directionClassification = {outputArray[3], outputArray[4], outputArray[5]};
+				float[] directionClassification = {outputArray[3], outputArray[4]};
 				
 				
 				
@@ -62,7 +64,7 @@ namespace DefaultNamespace
 				if (startStopStay == 0)
 				{
 					var directionSoftmax = SoftMax(directionClassification);
-					if(directionSoftmax[0] > directionSoftmax[2])
+					if(directionSoftmax[0] > directionSoftmax[1])
 						direction = -1;
 					else
 						direction = 1;
