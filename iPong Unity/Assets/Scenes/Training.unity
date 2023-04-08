@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe024f4b11a94282bfb8d1a598fbfdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _captureDelay: 0.01
+  _captureDelay: 0.1
   _saveDelay: 1
   p1: {fileID: 463064441}
   p2: {fileID: 1096363478}
@@ -755,7 +755,7 @@ MonoBehaviour:
   threshold: 0.1
   _loopDuration: 0.1
   _dataManager: {fileID: 571074630}
-  nnModel: {fileID: 5022602860645237092, guid: a0f1d24dc1c94c9448623ac9fe064652, type: 3}
+  nnModel: {fileID: 5022602860645237092, guid: bcdd7b3af39647849ade4c6ddcf9eff3, type: 3}
   inputArray: []
   outputArray: []
   direction: 0
@@ -1413,6 +1413,14 @@ PrefabInstance:
       value: Opponent
       objectReference: {fileID: 0}
     - target: {fileID: 1915580308850555520, guid: f90b346d45d2145d69eb5a9d720f35d3, type: 3}
+      propertyPath: leftKey
+      value: 97
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915580308850555520, guid: f90b346d45d2145d69eb5a9d720f35d3, type: 3}
+      propertyPath: rightKey
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915580308850555520, guid: f90b346d45d2145d69eb5a9d720f35d3, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -1432,6 +1440,10 @@ PrefabInstance:
       propertyPath: _ball
       value: 
       objectReference: {fileID: 3651399566054711592}
+    - target: {fileID: 8093325852763529181, guid: f90b346d45d2145d69eb5a9d720f35d3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8093325852763529181, guid: f90b346d45d2145d69eb5a9d720f35d3, type: 3}
       propertyPath: _loopDuration
       value: 0.5
