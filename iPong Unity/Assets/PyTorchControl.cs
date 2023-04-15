@@ -54,7 +54,10 @@ namespace DefaultNamespace
 				{
 					outputArray = output.ToReadOnlyArray();
 				}
-				float[] startStopProability = { outputArray[0], outputArray[1], outputArray[2] };
+				float[] startStopProability = { 
+					outputArray[0] * actionMultiplier, 
+					outputArray[1] * actionMultiplier, 
+					outputArray[2] };
 				float[] directionClassification = {outputArray[3], outputArray[4]};
 				
 				
@@ -87,6 +90,7 @@ namespace DefaultNamespace
 			
 		}
 
+		private float actionMultiplier => Mathf.Sqrt(_loopDuration / .1f);
 
 		private static int SelectByProbability(float[] inputs)
 		{

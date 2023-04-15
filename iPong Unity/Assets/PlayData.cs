@@ -35,15 +35,19 @@ public class PlayData
 		// MyPaddleIsLeft = p1._rb.velocity.x < 0 ? 1 : 0;
 		// MyPaddleIsStill = p1._rb.velocity.x == 0 ? 1 : 0;
 		MyPaddleTimeAsIs = timeAsIs; 
-		OpponentPaddle = p2.TForm.localPosition.x;
-		OpponentVelocity = p2._rb.velocity.x;
+		OpponentPaddle = p1.transform.InverseTransformDirection(p2.TForm.localPosition).x;
+		OpponentVelocity = p1.transform.InverseTransformDirection(p2._rb.velocity).x;
 
 		//ball model input
 		Ball ball = GameObject.FindObjectOfType<Ball>();
-		BallPositionX = ball ? ball.TForm.position.x : 0;
-		BallPositionY = ball ? ball.TForm.position.y : 0;
-		BallVelocityX = ball ? ball._rb.velocity.x : 0;
-		BallVelocityY = ball ? ball._rb.velocity.y : 0;
+		
+		Vector2 ballRelativePosition = p1.transform.InverseTransformPoint(ball.TForm.position);
+		Vector2 ballRelativeVelocity = p1.transform.InverseTransformDirection(ball._rb.velocity);
+		
+		BallPositionX = ballRelativePosition.x;
+		BallPositionY = ballRelativePosition.y;
+		BallVelocityX = ballRelativeVelocity.x;
+		BallVelocityY = ballRelativeVelocity.y;
 		
 		//paddle model output
 		IsPaddleStart = timeAsIs == 0 && p1._rb.velocity.x != 0 ? 1 : 0;
